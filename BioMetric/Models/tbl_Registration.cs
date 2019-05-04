@@ -14,10 +14,11 @@ namespace BioMetric.Models
     
     public partial class tbl_Registration
     {
-        public long ID { get; set; }
+        public Nullable<long> ID { get; set; }
         public string RegistrationNumber { get; set; }
         public string FullName { get; set; }
         public byte[] Photo { get; set; }
         public byte[] FingerPrint { get; set; }
+        public int iid { get; set; }
     }
 }

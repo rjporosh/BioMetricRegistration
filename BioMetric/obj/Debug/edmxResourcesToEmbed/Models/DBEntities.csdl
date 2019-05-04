@@ -2,15 +2,16 @@
 <Schema Namespace="BiometricRegistrationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="tbl_Registration">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="iid" />
     </Key>
-    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="ID" Type="Int64" />
     <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="FingerPrint" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="iid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
-  <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tbl_Registration" EntityType="Self.tbl_Registration" />
   </EntityContainer>
 </Schema>

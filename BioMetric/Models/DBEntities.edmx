@@ -4,36 +4,37 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BiometricRegistrationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BiometricRegistrationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tbl_Registration">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="iid" />
           </Key>
-          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="ID" Type="bigint" />
           <Property Name="RegistrationNumber" Type="varchar" MaxLength="50" />
           <Property Name="FullName" Type="varchar" MaxLength="50" />
           <Property Name="Photo" Type="image" />
           <Property Name="FingerPrint" Type="image" />
+          <Property Name="iid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityContainer Name="BiometricRegistrationModelStoreContainer">
           <EntitySet Name="tbl_Registration" EntityType="Self.tbl_Registration" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BiometricRegistrationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="tbl_Registration">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="iid" />
           </Key>
-          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="ID" Type="Int64" />
           <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="FingerPrint" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="iid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
-        <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tbl_Registration" EntityType="Self.tbl_Registration" />
         </EntityContainer>
       </Schema>
@@ -41,7 +42,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BiometricRegistrationModelStoreContainer" CdmEntityContainer="DBEntities">
+        <EntityContainerMapping StorageEntityContainer="BiometricRegistrationModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="tbl_Registration">
             <EntityTypeMapping TypeName="BiometricRegistrationModel.tbl_Registration">
               <MappingFragment StoreEntitySet="tbl_Registration">
@@ -50,6 +51,7 @@
                 <ScalarProperty Name="FullName" ColumnName="FullName" />
                 <ScalarProperty Name="Photo" ColumnName="Photo" />
                 <ScalarProperty Name="FingerPrint" ColumnName="FingerPrint" />
+                <ScalarProperty Name="iid" ColumnName="iid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

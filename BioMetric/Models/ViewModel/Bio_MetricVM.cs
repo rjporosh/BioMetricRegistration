@@ -12,5 +12,6 @@ namespace BioMetric.Models.ViewModel
         public string FullName { get; set; }
         public byte[] Photo { get; set; }
         public byte[] FingerPrint { get; set; }
+        public int iid { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="BiometricRegistrationModelStoreContainer" CdmEntityContainer="DBEntities">
+  <EntityContainerMapping StorageEntityContainer="BiometricRegistrationModelStoreContainer" CdmEntityContainer="Entities">
     <EntitySetMapping Name="tbl_Registration">
       <EntityTypeMapping TypeName="BiometricRegistrationModel.tbl_Registration">
         <MappingFragment StoreEntitySet="tbl_Registration">
@@ -9,6 +9,7 @@
           <ScalarProperty Name="FullName" ColumnName="FullName" />
           <ScalarProperty Name="Photo" ColumnName="Photo" />
           <ScalarProperty Name="FingerPrint" ColumnName="FingerPrint" />
+          <ScalarProperty Name="iid" ColumnName="iid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

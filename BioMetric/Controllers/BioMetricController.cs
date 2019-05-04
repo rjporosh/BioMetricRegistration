@@ -26,7 +26,7 @@ namespace BioMetric.Controllers
 
         [HttpPost]
 
-        public JsonResult Create([Bind(Exclude = "Id")] Bio_MetricVM vmObj)
+        public JsonResult Create([Bind] Bio_MetricVM vmObj)
         {
 
             

@@ -16,13 +16,7 @@ namespace BioMetric.Repository.BaseRepo
         public DBEntities db = new DBEntities();
         public int Add(T entity)
         {
-            //var addBy = entity.GetType().GetProperty("AddedBy");
-            //var addDate = entity.GetType().GetProperty("AddedDate");
-            //var identity = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            //string[] current = (identity.Identity.Name).Split('&');
-
-            //addBy.SetValue(entity, current[0], null);
-            //addDate.SetValue(entity, DateTime.Now, null);
+            
             db.Set<T>().Add(entity);
 
             return db.SaveChanges();
@@ -53,16 +47,7 @@ namespace BioMetric.Repository.BaseRepo
             db.Entry(entity).State = EntityState.Modified;
 
 
-            db.Entry(entity).Property("AddedBy").IsModified = false;
-            db.Entry(entity).Property("AddedDate").IsModified = false;
-
-            var identity = (ClaimsPrincipal)Thread.CurrentPrincipal;
-            string[] current = (identity.Identity.Name).Split('&');
-
-            var UpdatedBy = entity.GetType().GetProperty("UpdatedBy");
-            var UpdatedDate = entity.GetType().GetProperty("UpdatedDate");
-            UpdatedBy.SetValue(entity, current[0], null);
-            UpdatedDate.SetValue(entity, DateTime.Now, null);
+            
 
 
 
