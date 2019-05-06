@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
 
-    loadData();
+    //loadData();
 
 
 });
@@ -94,6 +94,7 @@ function getbyID(id) {
 //Function for clearing the textboxes
 function clearTextBox() {
     $('#myCustomForm')[0].reset();
+   
     $('#btnUpdate').hide();
     $('#btnAdd').show();
 }

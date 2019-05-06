@@ -138,6 +138,12 @@
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\script.js" />
+    <None Include="Service References\UranusCoreAPIServiceReference\configuration.svcinfo" />
+    <None Include="Service References\UranusCoreAPIServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\UranusCoreAPIServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference1.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config" />
     <Content Include="Views\BioMetric\Index.cshtml" />
   </ItemGroup>
@@ -171,6 +177,12 @@
     <Compile Include="Repository\BaseRepo\IRepository.cs" />
     <Compile Include="Repository\BaseRepo\Repository.cs" />
     <Compile Include="Repository\IBio_MetricRepository.cs" />
+    <Compile Include="Service References\UranusCoreAPIServiceReference\Reference.cs" />
+    <Compile Include="Service References\UranusCoreAPIServiceReference\Reference1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -182,6 +194,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Service References\UranusCoreAPIServiceReference\mex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UranusCoreAPIServiceReference\mex1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UranusCoreAPIServiceReference\mex2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\UranusCoreAPIServiceReference\SampleApplication.UranusCoreAPIServiceReference.BFSAuthResponse.datasource" />
+    <Content Include="Service References\UranusCoreAPIServiceReference\SampleApplication.UranusCoreAPIServiceReference.BFSInfoResponse.datasource" />
+    <Content Include="Service References\UranusCoreAPIServiceReference\SampleApplication.UranusCoreAPIServiceReference.BFSResponse.datasource" />
+    <Content Include="Service References\UranusCoreAPIServiceReference\SampleApplication.UranusCoreAPIServiceReference.BFSResponseBase.datasource" />
+    <None Include="Service References\UranusCoreAPIServiceReference\UranusCore.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -194,6 +220,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

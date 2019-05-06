@@ -39,3 +39,4 @@ C:\Users\Prince_Porosh\Documents\Visual Studio 2015\Projects\BioMetric\BioMetric
 C:\Users\Prince_Porosh\Documents\Visual Studio 2015\Projects\BioMetric\BioMetric\bin\System.Web.Mvc.xml
 C:\Users\Prince_Porosh\Documents\Visual Studio 2015\Projects\BioMetric\BioMetric\obj\Debug\BioMetric.dll
 C:\Users\Prince_Porosh\Documents\Visual Studio 2015\Projects\BioMetric\BioMetric\obj\Debug\BioMetric.pdb
+C:\Users\Prince_Porosh\Documents\Visual Studio 2015\Projects\BioMetric\BioMetric\obj\Debug\BioMetric.csprojResolveAssemblyReference.cache

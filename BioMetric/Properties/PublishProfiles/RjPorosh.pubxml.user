@@ -13,7 +13,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2018 13:00:14</publishTime>
     </File>
     <File Include="bin/BioMetric.dll">
-      <publishTime>05/05/2019 22:03:31</publishTime>
+      <publishTime>05/06/2019 11:32:55</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/23/2017 13:15:18</publishTime>
@@ -115,7 +115,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/04/2019 23:05:46</publishTime>
     </File>
     <File Include="Scripts/BioMetric.js">
-      <publishTime>05/04/2019 23:24:13</publishTime>
+      <publishTime>05/06/2019 11:06:36</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>05/04/2019 23:02:53</publishTime>
@@ -142,7 +142,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/05/2019 02:13:16</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>05/05/2019 02:26:23</publishTime>
+      <publishTime>05/06/2019 11:08:03</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
       <publishTime>05/04/2019 23:02:52</publishTime>
@@ -154,7 +154,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/04/2019 23:02:51</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/05/2019 22:03:31</publishTime>
+      <publishTime>05/06/2019 11:32:55</publishTime>
     </File>
   </ItemGroup>
 </Project>
