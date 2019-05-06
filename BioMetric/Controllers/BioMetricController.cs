@@ -46,7 +46,7 @@ namespace BioMetric.Controllers
                 if (isSaved > 0)
                 {
                     status = true;
-                    message = "Succesfully Saved";
+                    message = "Succesfully Registered";
                 }
                 else
                 {
@@ -60,7 +60,7 @@ namespace BioMetric.Controllers
             else
             {
                 status = false;
-                message = "Code Allready Exsists !!!";
+                message = "Student Allready Exsists !!!";
                 return new JsonResult { Data = new { status = status, message = message } };
             }
 
