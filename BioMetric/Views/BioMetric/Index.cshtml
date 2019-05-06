@@ -692,7 +692,7 @@
             </div>
             <!--fourth-tab-->
             <div id="menu4" class="tab-pane fade">
-                <form class="form-horizontal">
+                <form class="form-horizontal" id="myCustomForm">
 
 
                     <div class="panel panel-primary">
@@ -703,7 +703,7 @@
                                 @*@Html.labelfor(model => model.ID)*@
                                 <div class="col-sm-3">
                                     @*<input type="text" class="form-control">*@
-                                    @Html.TextBoxFor(model => model.ID, new { @class = "form-control"})
+                                    @Html.TextBoxFor(model => model.ID, new { @class = "form-control" })
                                 </div>
                                 <label class="control-label col-sm-3" for="RegistrationNumber">2.Registrstion Number:</label>
                                 <div class="col-sm-3">
@@ -712,7 +712,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-3" for ="FullName">3.FULL NAME:</label>
+                                <label class="control-label col-sm-3" for="FullName">3.FULL NAME:</label>
                                 <div class="col-sm-9">
                                     @*<input type="text" class="form-control">*@
                                     @Html.TextBoxFor(model => model.FullName, new { @class = "form-control", type = "text" })
@@ -736,13 +736,13 @@
                                             </div><div class="ui-fileupload-content ui-widget-content ui-corner-bottom"><!----><p-messages><!----></p-messages><!----><p-templateloader></p-templateloader></div></div><!----></p-fileupload></li><li _ngcontent-c5="" class="list-group-item clearfix" style="padding-bottom:0">
                                         <a _ngcontent-c5="" class="btn btn-default btn-umr-default" style="padding:7px 13px;">
                                         <i _ngcontent-c5="" class="fa fa-camera"></i></a></li><!----></ul>*@
-                                <label class="control-label col-sm-3" for ="fingerprint">5.finger-print:</label>
+                                <label class="control-label col-sm-3" for="fingerprint">5.finger-print:</label>
                                 @*@Html.labelfor(model => model.fingerprint)*@
                                 @*<div class="form-group">
-                                    @Html.LabelFor(model => model.Contact)
-                                    @Html.TextBoxFor(model => model.Contact, new { @class = "form-control" })
-                                    @Html.ValidationMessageFor(m => m.Contact, null, new { @class = "text-danger" })
-                                </div>*@
+                                        @Html.LabelFor(model => model.Contact)
+                                        @Html.TextBoxFor(model => model.Contact, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Contact, null, new { @class = "text-danger" })
+                                    </div>*@
                                 <div class="col-sm-3">
                                     @*<input type="file" class="form-control">*@
                                     @Html.TextBoxFor(model => model.FingerPrint, new { @class = "form-control", type = "file" })
@@ -753,10 +753,13 @@
                             </div>*@
                     </div>
                 </form>
+                <div id="message">
+
+                </div>
                 <div style="float:right;margin: 20px 0">
                     <a class="btn btn-primary btnPrevious">Previous</a>
-                    
-                    <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Add</button>
+
+                    <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Register</button>
                 </div>
             </div>
         </div><!--tab-content-->
@@ -773,7 +776,7 @@
   $('.btnPrevious').click(function(){
   $('.nav-tabs > .active').prev('li').find('a').trigger('click');
   });
- 
+
     </script>
 </body>
 </html>
