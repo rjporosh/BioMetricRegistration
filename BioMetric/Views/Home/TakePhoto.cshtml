@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TakePhoto</title>
+</head>
+<body>
+    <div style="margin: 0 auto; width: 980px; text-align: center">  
+        <div style="float: left; border: 4px solid #ccc; padding: 5px">  
+            <div id="Camera">  
+            </div>  
+            <br>  
+            <input type="button" value="Capture" />  
+        </div>  
+        <div style="float: left; margin-left: 20px; border: 4px solid #ccc; padding: 5px">  
+            <img id="show" style="width: 320px; height: 240px;" src="../../WebImages/person.jpg" />  
+            <br>  
+            <br>  
+            <input id="Submit1" type="submit" value="submit" />  
+        </div>  
+        @section scripts
+{
+            <script src="@Url.Content("~/Scripts/jquery.webcam.js")"></script>
+            <script type="text/javascript">
+
+            $("#Camera").webcam({
+                width: 320,
+                height: 240,
+                mode: "save",
+                swffile: "@Url.Content("~/Scripts/jscam.swf")",
+                onTick: function () { },
+                onSave: function () {
+                    UploadPic();
+                },
+                onCapture: function () {
+                    webcam.save("@Url.Content("~/Home/Capture")/");
+             },
+                debug: function () { },
+                onLoad: function () { }
+
+            });
+
+            </script>
+        }
+
+
+  </div>   
+</body>
+</html>

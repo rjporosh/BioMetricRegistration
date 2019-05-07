@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'c:\users\prince_porosh\documents\visual studio 2015\Projects\BioMetric\BioMetric\Models\DBEntities.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Prince_Porosh\Documents\Visual Studio 2015\Projects\BioMetric\BioMetric\Models\DBEntities.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

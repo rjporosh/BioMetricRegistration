@@ -1,6 +1,7 @@
 ﻿@model BioMetric.Models.ViewModel.Bio_MetricVM
 @{
-    ViewBag.Title = "Bio-Metric Registration";
+   // ViewBag.Title = "Bio-Metric Registration";
+    ViewBag.Title = "Changephoto";
     Layout = null;
 }
 
@@ -699,6 +700,22 @@
                         <div class="panel-heading" style="text-align:center;font-size: 22px">Registration</div>
                         <div class="panel-body">
                             <div class="form-group">
+                                <script type="text/javascript">
+
+                              function ShowPopUp() {
+
+                               window.open('/Home/TakePhoto/', "wndPopUp", 'width=720,height=400,left=100,top=100,resizable=no');
+
+                                                   }
+
+                                </script>
+
+
+                                <img id="Userpic" src="@ViewBag.pic" />
+                                <br />
+                            </div>
+                            <input type="button" id="btnSave" value="Take Photo" onclick="ShowPopUp();" />
+                            <div class="form-group">
                                 <label class="control-label col-sm-3" for="ID">1.ID:</label>
                                 @*@Html.labelfor(model => model.ID)*@
                                 <div class="col-sm-3">
@@ -765,7 +782,7 @@
         </div><!--tab-content-->
     </div><!--container-->
 
-
+    <script src="~/Scripts/jquery.webcam.js"></script>
     <script src="~/Scripts/BioMetric.js"></script>
     <script src="js/script.js"></script>
     <script>
